@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paket Soal Infografik Kesehatan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <p class="kicker">Bahasa Indonesia · Literasi Visual</p>
+        <h1>LKPD Literasi Visual</h1>
+        <p class="subtitle">Infografik Kesehatan &amp; Pola Hidup Sehat</p>
+        <div class="meta">
+          <span>15 soal</span>
+          <span>4 stimulus infografik</span>
+          <span>Level L1–L3</span>
+        </div>
+      </header>
+
+      <section class="card instructions" id="petunjuk">
+        <h2>Petunjuk Pengerjaan</h2>
+        <ol>
+          <li>Amati infografik pada setiap stimulus sebelum menjawab soal.</li>
+          <li>Pilih satu jawaban paling tepat untuk setiap nomor.</li>
+          <li>Setelah selesai, klik <strong>Kumpulkan dan Akhiri</strong> untuk melihat nilai dan pembahasan.</li>
+        </ol>
+      </section>
+
+      <form id="quizForm">
+        <section class="card student-info" aria-labelledby="identitas-title">
+          <h2 id="identitas-title">Identitas Peserta Didik</h2>
+          <div class="identity-grid">
+            <label>Nama lengkap<input type="text" name="studentName" autocomplete="name" /></label>
+            <label>Kelas<input type="text" name="studentClass" /></label>
+            <label>Tanggal<input type="date" name="workDate" /></label>
+          </div>
+        </section>
+        <section class="stimulus" id="stimulus-1">
+          <div class="stimulus-head">
+            <span class="badge">Stimulus 1</span>
+            <h2>Infografik Kesehatan &amp; Pola Hidup Sehat</h2>
+          </div>
+          <figure class="infographic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbHHG6pjSob7eveteqAInezNz7oApsbsmqwjb7vHcskg&s=10"
+              alt="Infografik kesehatan dan pola hidup sehat: piring makan seimbang, air putih, dan kebiasaan sehat"
+            />
+            <figcaption>Amati judul, gambar piring gizi seimbang, dan teks singkat pada infografik.</figcaption>
+          </figure>
+          <div class="questions" data-from="1" data-to="5"></div>
+        </section>
+
+        <section class="stimulus" id="stimulus-2">
+          <div class="stimulus-head">
+            <span class="badge">Stimulus 2</span>
+            <h2>Infografik Pola Makan Sehat</h2>
+          </div>
+          <figure class="infographic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyegrGw5NK6fE-QNUGRM4dW_kLpvmxo9VHEzZunJLoBQ&s=10"
+              alt="Infografik pola makan sehat: komposisi makanan sehari-hari"
+            />
+            <figcaption>Perhatikan komposisi dan aturan pola makan yang ditampilkan secara visual.</figcaption>
+          </figure>
+          <div class="questions" data-from="6" data-to="7"></div>
+        </section>
+
+        <section class="stimulus" id="stimulus-3">
+          <div class="stimulus-head">
+            <span class="badge">Stimulus 3</span>
+            <h2>Infografik “5 Manfaat Bersepeda”</h2>
+          </div>
+          <figure class="infographic">
+            <img
+              src="https://www.apridesain.id/blog/wp-content/uploads/2020/11/Infografis-5-Manfaat-Bersepeda.png"
+              alt="Infografik 5 manfaat bersepeda"
+            />
+            <figcaption>Cermati lima poin manfaat bersepeda yang dikemas dalam ikon dan kalimat pendek.</figcaption>
+          </figure>
+          <div class="questions" data-from="8" data-to="11"></div>
+        </section>
+
+        <section class="stimulus" id="stimulus-4">
+          <div class="stimulus-head">
+            <span class="badge">Stimulus 4</span>
+            <h2>Infografik “Waspada Campak Kembali Merebak”</h2>
+          </div>
+          <figure class="infographic">
+            <img
+              src="https://unair.ac.id/wp-content/uploads/2026/04/Infografik_Waspada_Campak_Kembali_Merebak_Tina.webp"
+              alt="Infografik waspada campak kembali merebak: gejala, pencegahan, dan imbauan"
+            />
+            <figcaption>Perhatikan gejala, pencegahan, dan imbauan kewaspadaan penyakit campak.</figcaption>
+          </figure>
+          <div class="questions" data-from="12" data-to="15"></div>
+        </section>
+
+        <div class="actions">
+          <p class="progress" id="progressText">0 dari 15 soal terjawab</p>
+          <div class="action-row">
+            <button type="button" class="btn ghost" id="resetBtn">Reset</button>
+            <button type="submit" class="btn primary" id="submitBtn">Kumpulkan dan Akhiri</button>
+          </div>
+        </div>
+      </form>
+
+      <section class="card result hidden" id="result" aria-live="polite">
+        <h2>Nilai LKPD</h2>
+        <p class="score-line"><span id="scoreValue">0</span> / 15</p>
+        <p class="score-label" id="scoreLabel"></p>
+        <div class="bar"><span id="scoreBar"></span></div>
+        <p class="hint">Gulir ke atas untuk melihat kunci dan pembahasan pada setiap soal.</p>
+        <button type="button" class="btn ghost" id="retryBtn">Ulangi Kuis</button>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
